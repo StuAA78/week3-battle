@@ -19,8 +19,9 @@ class Battle < Sinatra::Base
   get '/play' do
     @action = params['action']
     if @action == "attack"
-      $game.attack($game.player_1, $game.player_2, 10)
+      $game.attack($game.attacker, $game.defender, 10)
     end
+    $game.switch_players
     erb(:play)
   end
 

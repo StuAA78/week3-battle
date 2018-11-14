@@ -15,4 +15,5 @@ describe Game do
   expect(game.player_1).to eq player1
   expect(game.player_1).not_to eq player2
   end
+
 end

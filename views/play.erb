@@ -6,15 +6,16 @@
 </head>
 <body>
 
-  Hello <%= $game.player_1.name %> and <%= $game.player_2.name %>!
+  Hello <%= $game.player_1.name %> and <%= $game.player_2.name %>!<br />
 
-  <%= $game.player_2.name %> HP: <%= $game.player_2.hit_points %>
+  <%= $game.player_1.name %> HP: <%= $game.player_1.hit_points %><br />
+  <%= $game.player_2.name %> HP: <%= $game.player_2.hit_points %><br />
 
   <form action="/play">
     <button type="submit" name="action" value="attack">Attack</button>
   </form>
 
   <% if @action == "attack" %>
-  You attacked <%= $game.player_2.name %>
+  <%= $game.defender.name %> attacked <%= $game.attacker.name %>
   <% end %>
 </body>
