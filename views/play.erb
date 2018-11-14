@@ -10,4 +10,11 @@
 
   <%= @player_2 %> HP: 20
 
+  <form action="/play">
+    <button type="submit" name="action" value="attack">Attack</button>
+  </form>
+
+  <% if @action == "attack" %>
+  You attacked <%= @player_2 %>
+  <% end %>
 </body>
